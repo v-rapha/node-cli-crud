@@ -1,8 +1,4 @@
 [
-  {
-    "id": 1,
-    "name": "v-rapha",
-    "hole": "back-end",
-    "level": "junior"
-  }
+  { "id": 1, "name": "v-rapha", "hole": "back-end", "level": "junior" },
+  { "id": 1, "name": "v-rapha", "hole": "back-end", "level": "junior" }
 ]
