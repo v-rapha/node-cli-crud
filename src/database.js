@@ -53,6 +53,45 @@ class Database {
       console.error('create - ERROR', error);
     }
   }
+
+  async delete(id) {
+    try {
+      if (!id) return await this.writeInFile([]);
+
+      const developersList = await this.getFileData();
+      const devIndex = developersList.findIndex(
+        item => item.id === parseInt(id)
+      );
+
+      if (devIndex === -1)
+        throw Error('The developer with this id does not exist!');
+
+      developersList.splice(devIndex, 1);
+
+      return await this.writeInFile(developersList);
+    } catch (error) {
+      console.error('delete - ERROR', error);
+    }
+  }
+
+  async update(id, modData) {
+    try {
+      const developersList = await this.getFileData();
+      const devIndex = developersList.findIndex(item => item.id === id);
+
+      if (devIndex === -1)
+        throw Error('The developer with this id does not exist!');
+
+      const current = developersList[devIndex];
+      const updateObj = { ...current, ...modData };
+
+      developersList.splice(devIndex, 1);
+
+      return await this.writeInFile([...developersList, updateObj]);
+    } catch (error) {
+      console.error('update - ERROR', error);
+    }
+  }
 }
 
 module.exports = new Database();
