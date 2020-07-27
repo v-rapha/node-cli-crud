@@ -13,7 +13,7 @@
 </p>
 
 ## Project
-<strong>Node-cli-crud</strong> was built using Test-driven development (TDD) and aims to create a crud (create, read, update and delete) of developers using the command line.
+<strong>Node-cli-crud</strong> was built using Test-driven development (TDD) and aims to create a crud (create, read, update and delete) of developers using files and the command line.
 
 ## Technologies
 This project was developed using the following technologies:
