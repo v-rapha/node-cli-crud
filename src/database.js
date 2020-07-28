@@ -31,7 +31,7 @@ class Database {
   async read(id) {
     try {
       const data = await this.getFileData();
-      const filteredData = data.filter(item => (id ? item.id === id : true));
+      const filteredData = data.filter(item => (id ? item.id === parseInt(id) : true));
 
       return filteredData;
     } catch (error) {
