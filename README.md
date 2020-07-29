@@ -36,10 +36,10 @@ To run this application, you'll need [Nodejs](https://nodejs.org/en/) and [NPM](
   $ npm install
 ```
 
-## Functionalities
+## Options
 - You can see the options using the command `$ node src/index.js --help`
 
-## Options
+## Licence
 This project is under the MIT licence. See the [LICENSE](https://github.com/v-rapha/node-cli-crud/blob/master/LICENSE) for details.
 
 ---
