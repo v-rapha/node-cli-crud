@@ -1,5 +1,5 @@
 <h1 align="center">
-  # Node command-line interface CRUD
+  Node command-line interface CRUD
 </h1>
 
 <p align="center">
@@ -35,9 +35,11 @@ To run this application, you'll need [Nodejs](https://nodejs.org/en/) and [NPM](
 ```sh
   $ npm install
 ```
-*loading...*
 
-## License
+## Functionalities
+- You can see the options using the command `$ node src/index.js --help`
+
+## Options
 This project is under the MIT licence. See the [LICENSE](https://github.com/v-rapha/node-cli-crud/blob/master/LICENSE) for details.
 
 ---

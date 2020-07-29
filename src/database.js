@@ -31,7 +31,9 @@ class Database {
   async read(id) {
     try {
       const data = await this.getFileData();
-      const filteredData = data.filter(item => (id ? item.id === parseInt(id) : true));
+      const filteredData = data.filter(item =>
+        id ? item.id === parseInt(id) : true
+      );
 
       return filteredData;
     } catch (error) {
@@ -43,6 +45,13 @@ class Database {
     try {
       const developersList = await this.getFileData();
       const id = dev.id <= 2 ? dev.id : Date.now();
+
+      if (
+        dev.name === undefined ||
+        dev.role === undefined ||
+        dev.level === undefined
+      )
+        throw Error('The developer could not be created. Missing values!');
 
       const setDeveloperId = { id, ...dev };
       const setDevelopersList = [...developersList, setDeveloperId];
